@@ -1,17 +1,16 @@
-// App.jsx
-import { Routes, Route } from 'react-router-dom'
-import Home from './components/Home'
-import CreateAccount from './components/CreateAccount'
-import SignIn from './components/SignIn'
-import UserProfile from './components/UserProfile'
+import Header from './components/Header.jsx'
+import './output.css'
+import './index.css'
+import Avatar from './components/Avatar.jsx'
+import FloatCreateButton from './components/FloatCreateButton.jsx'
 
 export default function App() {
+  const userName = "Jhon Doe" 
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/create-account" element={<CreateAccount />} />
-      <Route path="/signin" element={<SignIn />} />
-      <Route path="/profile" element={<UserProfile />} />
-    </Routes>
+    <div className='h-screen bg-gradient-to-b from-white to-gray-100'>
+        <Header userName={userName} />
+        <Avatar />
+        <FloatCreateButton />
+    </div>
   )
 }
