@@ -1,13 +1,12 @@
-# User Management Application
+# AI Assistant Application
 
-This is a React-based user management application that allows users to create accounts, log in, and view their profile information. The application is styled using Tailwind CSS.
+This is a React-based AI Assistant application that allows users to create avatars, edit avatars, and have conversations with the AI Assistant. The application is styled using Tailwind CSS.
 
 ## Features
-- Create multiple user accounts.
-- Log in with email and password.
-- Display logged-in user's full name and email on the profile page.
-- Error handling for login (e.g., incorrect email or password).
-
+- A welcome header + user greeting.
+- A card-based section to display 3 dummy avatars (name, preview image, "Edit" button).
+- A floating "Create New Avatar" button that opens a modal (no need to save, just UI).
+  
 ## Technologies Used
 - React
 - Vite
@@ -18,9 +17,9 @@ This is a React-based user management application that allows users to create ac
 assignment/
 ├── src/
 │   ├── components/
-│   │   ├── CreateAccount.jsx
-│   │   ├── SignIn.jsx
-│   │   ├── UserProfile.jsx
+│   │   ├── Avatar.jsx
+│   │   ├── FloatCreateButton.jsx
+│   │   ├── Header.jsx
 │   ├── App.jsx
 │   ├── main.jsx
 ├── index.html
@@ -36,30 +35,19 @@ assignment/
    npx @tailwindcss/cli init -p
    ```
 
-2. Configure `tailwind.config.js`:
-   ```javascript
-   module.exports = {
-     content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
-     theme: {
-       extend: {},
-     },
-     plugins: [],
-   };
-   ```
-
-3. Add Tailwind directives to your CSS file (`src/index.css`):
+2. Add Tailwind directives to your CSS file (`src/index.css`):
    ```css
    @tailwind base;
    @tailwind components;
    @tailwind utilities;
    ```
 
-4. Build the CSS file:
+3. Build the CSS file:
    ```bash
    npx @tailwindcss/cli -i ./src/index.css -o ./src/output.css --watch
    ```
 
-5. Start the development server:
+4. Start the development server:
    ```bash
    npm run dev
    ```
@@ -85,6 +73,3 @@ assignment/
    npm run dev
    ```
 5. Open the application in your browser.
-
-## License
-This project is licensed under the MIT License.
